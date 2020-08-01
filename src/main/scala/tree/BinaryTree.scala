@@ -1,4 +1,4 @@
-package collections
+package tree
 
 sealed abstract class BinaryTree[+A <% Ordered[A]] {
 
@@ -13,9 +13,9 @@ sealed abstract class BinaryTree[+A <% Ordered[A]] {
 
   override def toString: String =
     if(isEmpty)
-      "."
+      "@"
     else
-    "{" + left + value + right + "}"
+    "[" + left + "<-" + value + "->" + right + "]"
 
   def add[B >: A <% Ordered[B]](v: B): BinaryTree[B] =
     if(isEmpty)
