@@ -1,6 +1,6 @@
 # DataStructure
 DataStructure implementation in Scala
 
-1. Link List 
+1. Linked List 
 2. Binary Search Tree
 
