@@ -1,5 +1,5 @@
 import tree.BinaryTree
-import collections.List
+import collections.{List, Stack}
 
 object CollectionRunner {
 
@@ -9,6 +9,9 @@ object CollectionRunner {
       println("----------------------------------")
       println("----------- LIST ------------")
       listRunner()
+      println("----------------------------------")
+      println("----------- STACK ------------")
+      stackRunner()
       println("----------------------------------")
 
     }
@@ -46,6 +49,19 @@ object CollectionRunner {
     println(ls.sum)
     println(ls.product)
     println(ls.min)
+  }
+
+  def stackRunner(): Unit = {
+    val stack: Stack[Int] = Stack(1, 2, 3, 4, 5, 6)
+
+    println(stack.size)
+    stack.printStack
+    println(stack.top)
+    val newStack = stack.pop
+    newStack.printStack
+    stack.push(12).printStack
+
+
   }
 
 }
